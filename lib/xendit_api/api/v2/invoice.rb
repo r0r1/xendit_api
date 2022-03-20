@@ -13,8 +13,8 @@ module XenditApi
           XenditApi::Model::V2::Invoice.new(response)
         end
 
-        def post(params:)
-          response = client.post(PATH, params)
+        def post(params:, headers: nil)
+          response = client.post(PATH, params, headers)
 
           XenditApi::Model::V2::Invoice.new(response)
         end
