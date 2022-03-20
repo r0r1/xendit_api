@@ -5,9 +5,7 @@ module XenditApi
     class FeeRule < XenditApi::Model::Base
       attr_accessor :name,
                     :routes,
-                    :description,
-                    :created,
-                    :status
+                    :description
     end
   end
 end
