@@ -75,6 +75,10 @@ module XenditApi
       @fee_rule ||= XenditApi::Api::FeeRule.new(self)
     end
 
+    def callback_url
+      @callback_url ||= XenditApi::Api::CallbackUrl.new(self)
+    end
+
     def get(url, params = nil)
       response = @connection.get(url, params)
       response.body
