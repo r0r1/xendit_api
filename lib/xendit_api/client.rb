@@ -9,6 +9,7 @@ require 'xendit_api/api/qr_code'
 require 'xendit_api/api/v2/invoice'
 require 'xendit_api/api/v2/account'
 require 'xendit_api/api/fee_rule'
+require 'xendit_api/api/callback_url'
 
 
 module XenditApi
