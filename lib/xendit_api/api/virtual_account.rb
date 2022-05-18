@@ -35,7 +35,7 @@ module XenditApi
         XenditApi::Model::VirtualAccount.new(virtual_account_response)
       end
 
-      def find(id, params = nil, headers = nil)
+      def find(id, params:, headers:)
         find_path = "#{PATH}/#{id}"
         response = client.get(find_path, params, headers)
         virtual_account_params = permitted_virtual_account_params(response)
