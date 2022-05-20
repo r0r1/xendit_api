@@ -10,6 +10,7 @@ require 'xendit_api/api/v2/invoice'
 require 'xendit_api/api/v2/account'
 require 'xendit_api/api/fee_rule'
 require 'xendit_api/api/callback_url'
+require 'xendit_api/api/balance'
 
 
 module XenditApi
@@ -78,6 +79,10 @@ module XenditApi
 
     def callback_url
       @callback_url ||= XenditApi::Api::CallbackUrl.new(self)
+    end
+
+    def balance
+      @balance ||= XenditApi::Api::Balance.new(self)
     end
 
     def get(url, params = nil, headers = nil)
