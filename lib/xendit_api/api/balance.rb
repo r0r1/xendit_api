@@ -6,10 +6,10 @@ module XenditApi
     class Balance < XenditApi::Api::Base
       PATH = '/balance'.freeze
 
-      def get(params, headers)
+      def get(params:, headers:)
         response = client.get(PATH, params, headers)
 
-        XenditApi::Model::V2::Balance.new(response)
+        XenditApi::Model::Balance.new(response)
       end
     end
   end
