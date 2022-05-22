@@ -11,6 +11,7 @@ require 'xendit_api/api/v2/account'
 require 'xendit_api/api/fee_rule'
 require 'xendit_api/api/callback_url'
 require 'xendit_api/api/balance'
+require 'xendit_api/api/transfer'
 
 
 module XenditApi
@@ -75,6 +76,10 @@ module XenditApi
 
     def fee_rule
       @fee_rule ||= XenditApi::Api::FeeRule.new(self)
+    end
+
+    def transfer
+      @transfer ||= XenditApi::Api::Transfer.new(self)
     end
 
     def callback_url

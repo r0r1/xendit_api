@@ -12,6 +12,7 @@ require 'xendit_api/errors/virtual_account'
 require 'xendit_api/errors/v1/ewallet'
 require 'xendit_api/errors/v2/invoice'
 require 'xendit_api/errors/fee_rule'
+require 'xendit_api/errors/transfer'
 
 module XenditApi
   class << self
